@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+:root {
+  /* Palette V1 Tokens (Direct & Aliased) */
+  --signal-red: #D4141C;
+  --deep-red: #A80E15;
+  --red-tint: #FDECEC;
+  --white: #FFFFFF;
+  --cloud: #F3F5F8;
+  --ink-navy: #14213A;
+  --slate: #56627A;
+  --line: #DDE2EA;
+  --success: #1A9D55;
+
+  --color-signal-red: var(--signal-red);
+  --color-deep-red: var(--deep-red);
+  --color-red-tint: var(--red-tint);
+  --color-white: var(--white);
+  --color-cloud: var(--cloud);
+  --color-ink-navy: var(--ink-navy);
+  --color-slate: var(--slate);
+  --color-line: var(--line);
+  --color-success: var(--success);
+
+  --background: var(--white);
+  --foreground: var(--ink-navy);
+}
+
+@theme {
+  --color-signal-red: #D4141C;
+  --color-deep-red: #A80E15;
+  --color-red-tint: #FDECEC;
+  --color-white: #FFFFFF;
+  --color-cloud: #F3F5F8;
+  --color-ink-navy: #14213A;
+  --color-slate: #56627A;
+  --color-line: #DDE2EA;
+  --color-success: #1A9D55;
+
+  --font-sans: var(--font-figtree), "Figtree", sans-serif;
+  --font-archivo: var(--font-archivo), "Archivo", sans-serif;
+  --font-figtree: var(--font-figtree), "Figtree", sans-serif;
+}
+
+/* Strict 0px border-radius reset on all interactive elements */
+button,
+input,
+select,
+textarea,
+a,
+[role="button"],
+.btn,
+.card,
+.input-sharp {
+  border-radius: 0px !important;
+}
+
+.arch-frame {
+  border-top-left-radius: 220px !important;
+  border-top-right-radius: 220px !important;
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+/* Typography Utility Classes */
+.font-hero {
+  font-family: var(--font-archivo), 'Archivo', sans-serif;
+  font-variation-settings: 'wdth' 112, 'wght' 800;
+  font-weight: 800;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+}
+
+.font-nav-btn {
+  font-family: var(--font-figtree), 'Figtree', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.font-lead {
+  font-family: var(--font-figtree), 'Figtree', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #56627A;
+}
+
+.font-section {
+  font-family: var(--font-archivo), 'Archivo', sans-serif;
+  font-variation-settings: 'wdth' 105, 'wght' 700;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.font-card {
+  font-family: var(--font-archivo), 'Archivo', sans-serif;
+  font-variation-settings: 'wdth' 100, 'wght' 700;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+/* Swiss Industrial Button & Grid Utilities */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  background-color: var(--signal-red);
+  color: var(--white);
+  font-family: var(--font-figtree), 'Figtree', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: none;
+  border-radius: 0px;
+  border: 1px solid var(--signal-red);
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+  background-color: var(--deep-red);
+  border-color: var(--deep-red);
+}
+
+.swiss-grid-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  border-left: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+}
+
+.hairline-b {
+  border-bottom: 1px solid var(--line);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--line);
+}
+
+.hairline-r {
+  border-right: 1px solid var(--line);
+}
+
+.hairline-l {
+  border-left: 1px solid var(--line);
+}
+
+/* Base Body Setup */
+body {
+  background-color: var(--white);
+  color: var(--ink-navy);
+  font-family: var(--font-figtree), 'Figtree', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
